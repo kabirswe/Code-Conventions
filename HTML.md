@@ -1,4 +1,4 @@
-# [HTML Code Conventions][![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
+# HTML Code Conventions [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
 
 
 ## Formatting
@@ -16,7 +16,7 @@
 ## Try to use one selector per line
 
 ```css
-//Bad
+# Bad
 .avatar{
     border-radius:50%;
     border:2px solid white;
@@ -27,7 +27,7 @@
 #lol-no {
   // ...
 }
-//Good
+# Good
 .avatar {
   border-radius: 50%;
   border: 2px solid white;
