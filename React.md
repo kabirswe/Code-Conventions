@@ -196,7 +196,7 @@ Use /* ... / for multi-line comments.
 
 ## Try to follow lifecycle ordering: 
 ```flowchart TD
-    Optional static method --> Constructor --> componentDidMount --> shouldComponentUpdate --> componentDidUpdate --> componentWillUnmount --> render
+Optional static method --> Constructor --> componentDidMount --> shouldComponentUpdate --> componentDidUpdate --> componentWillUnmount --> render
 ```
 
 ### License
