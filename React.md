@@ -195,8 +195,7 @@ Use /* ... / for multi-line comments.
 ## Ternaries should not be nested and generally be single line expressions. (E.g. var foo = maybe1 > maybe2 ? 'bar' : maybeNull;)
 
 ## Try to follow lifecycle ordering: 
-```mermaid
-sequenceDiagram TD
+```flowchart TD
     Optional static method --> Constructor --> componentDidMount --> shouldComponentUpdate --> componentDidUpdate --> componentWillUnmount --> render
 ```
 
