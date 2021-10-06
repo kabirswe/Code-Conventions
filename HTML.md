@@ -1,113 +1,82 @@
 # HTML Code Conventions [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
 
 
-## Formatting
-
-* Use soft tabs (2 spaces) for indentation.
-* Names are written in lowercase Latin letters.
-* Words are separated by a hyphen (-).
-* Prefer dashes over camelCasing in class names.
-* When using multiple selectors one rule declaration, give each selector its own line.
-* Put a space before the opening brace { in rule declarations.
-* In properties, put a space after, but not before, the : character.
-* Put closing braces } of rule declarations on a new line.
-* Put blank lines between rule declarations.
-
-## Try to use one selector per line
-
-```css
+## Close All HTML Elements
+```html
 ==> Bad
-.avatar{
-    border-radius:50%;
-    border:2px solid white;
- }
-.no, .nope, .not_good {
-   // ...
-}
-#lol-no {
-  // ...
-}
-
-==> Good
-.avatar {
-  border-radius: 50%;
-  border: 2px solid white;
-}
-.one,
-.selector,
-.per-line {
-  // ...
-}
+<section>
+  <p>This is a paragraph.
+  <p>This is a paragraph.
+</section>
+<meta charset="utf-8">
+==> Good 
+<section>
+  <p>This is a paragraph.</p>
+  <p>This is a paragraph.</p>
+</section>
+<meta charset="utf-8"/>
 ```
-## For Border I think border none is good
-
-```css
+## Spaces and Equal Signs 
+```html
 ==> Bad
-.foo {
-  border: none;
-}
-
+<link rel = "stylesheet" href = "styles.css">
 ==> Good
-.foo {
-  border: 0;
-}
+<link rel="stylesheet" href="styles.css">
 ```
-## Ordering of property declarations
-1. Property declarations
-List all standard property declarations, anything that isn't an @include or a nested selector.
-
-
-```css
-.btn-green {
-  background: green;
-  font-weight: bold;
-  // ...
-}
-```
-2. Placed @include at the end makes it easier to read the entire selector.
-
-```css
-.btn-green {
-  background: green;
-  font-weight: bold;
-  @include transition(background 0.5s ease);
-  // ...
-}
-```
-3. For Nested Selectors
-
-```css
-.btn {
-  background: green;
-  font-weight: bold;
-  @include transition(background 0.5s ease);
-
-  .icon {
-    margin-right: 10px;
-  }
-}
-```
-
-## Naming Conventions
-1. Regarding variables, functions and mixins used lowercase hyphen-delimited, and camelCase(for css module only)  and above all meaningful.
-
-```css
-$vertical-rhythm-baseline: 1.5rem; 
-@mixin size($width, $height: $width) {
-  // ...
-}
-@function opposite-direction($direction) {
-    // ...
-}
-```
-2. For constants used all-caps snakerized variables
-```css
+## Blank Lines and Indentation
+Do not add blank lines without a reason.
+```html
 ==> Bad
-$css-positions: (top, right, bottom, left, center);
-==> Good
-$CSS_POSITIONS: (top, right, bottom, left, center);
-```
+<div>
 
+  <h1>Famous Cities</h1>
+
+  <h2>Tokyo</h2>
+
+  <p>
+	Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+	and the most populous metropolitan area in the world.
+	It is the seat of the Japanese government and the Imperial Palace,
+	and the home of the Japanese Imperial Family.
+  </p>
+
+</div>
+
+// Good
+<body>
+
+<h1>Famous Cities</h1>
+
+<h2>Tokyo</h2>
+<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.
+It is the seat of the Japanese government and the Imperial Palace,
+and the home of the Japanese Imperial Family.</p>
+
+</body>
+```
+## Do not use entity references.
+```html
+<!-- Bad -->
+The currency symbol for the Euro is &ldquo;&eur;&rdquo;.
+<!-- Good-->
+The currency symbol for the Euro is "€".
+
+```
+## Break long lines (optional). // we can remove this one
+```html
+// Bad
+<md-progress-circular md-mode="indeterminate" class="md-accent"
+    ng-show="ctrl.loading" md-diameter="35">
+</md-progress-circular>
+// Good
+<md-progress-circular
+    md-mode="indeterminate"
+    class="md-accent"
+    ng-show="ctrl.loading"
+    md-diameter="35">
+</md-progress-circular>
+```
 ### License
 
 React is [MIT licensed](./LICENSE).
