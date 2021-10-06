@@ -196,8 +196,13 @@ Use /* ... / for multi-line comments.
 
 ## Try to follow lifecycle ordering: 
 ```mermaid
-graph TB
-Optional static method --> Constructor --> componentDidMount --> shouldComponentUpdate --> componentDidUpdate --> componentWillUnmount --> render
+flowchart TD
+A[Optional static method] --> B[Constructor]
+B --> C[componentDidMount] 
+D --> E[shouldComponentUpdate] 
+F --> G[componentDidUpdate] 
+H --> I[componentWillUnmount] 
+J --> K[render]
 ```
 
 ### License
