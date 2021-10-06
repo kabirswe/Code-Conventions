@@ -195,21 +195,14 @@ Use /* ... / for multi-line comments.
 ## Ternaries should not be nested and generally be single line expressions. (E.g. var foo = maybe1 > maybe2 ? 'bar' : maybeNull;)
 
 ## Try to follow lifecycle ordering: 
-```mermaid
-flowchart TD
-A[Optional static method] --> B[Constructor];
-B --> C[componentDidMount];
-D --> E[shouldComponentUpdate]; 
-F --> G[componentDidUpdate];
-H --> I[componentWillUnmount]; 
-J --> K[render];
-```
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
+```jsx
+Optional static method
+Constructor
+componentDidMount
+shouldComponentUpdate
+componentDidUpdate
+componentWillUnmount 
+render
 ```
 ### License
 
