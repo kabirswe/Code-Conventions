@@ -186,13 +186,13 @@ render() {
 Use // for single line comments.
 Use /* ... / for multi-line comments.
 ```
-### Strings that cause the line to go over 100 characters should not be written across multiple lines using string concatenation.
-### Avoid single letter names. Be descriptive with your naming.
-### Use the literal syntax for object and array creation (E.g.  var item = {};)
-### Add spaces inside curly braces. (E.g. var foo = { clark: 'kent' };)
-### Avoid spaces before commas and require a space after commas. (E.g. var arr = [1, 2])
-### Avoid spaces between functions and their invocations.(E.g. var obj = {"foo": 42};)
-### Ternaries should not be nested and generally be single line expressions. (E.g. var foo = maybe1 > maybe2 ? 'bar' : maybeNull;)
+#### Strings that cause the line to go over 100 characters should not be written across multiple lines using string concatenation.
+#### Avoid single letter names. Be descriptive with your naming.
+#### Use the literal syntax for object and array creation (E.g.  var item = {};)
+#### Add spaces inside curly braces. (E.g. var foo = { clark: 'kent' };)
+#### Avoid spaces before commas and require a space after commas. (E.g. var arr = [1, 2])
+#### Avoid spaces between functions and their invocations.(E.g. var obj = {"foo": 42};)
+#### Ternaries should not be nested and generally be single line expressions. (E.g. var foo = maybe1 > maybe2 ? 'bar' : maybeNull;)
 
 ## Try to follow lifecycle ordering: 
 ```jsx
