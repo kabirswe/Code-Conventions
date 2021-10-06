@@ -197,12 +197,12 @@ Use /* ... / for multi-line comments.
 ## Try to follow lifecycle ordering: 
 ```mermaid
 flowchart TD
-A[Optional static method] --> B[Constructor]
-B --> C[componentDidMount] 
-D --> E[shouldComponentUpdate] 
-F --> G[componentDidUpdate] 
-H --> I[componentWillUnmount] 
-J --> K[render]
+A[Optional static method] --> B[Constructor];
+B --> C[componentDidMount];
+D --> E[shouldComponentUpdate]; 
+F --> G[componentDidUpdate];
+H --> I[componentWillUnmount]; 
+J --> K[render];
 ```
 
 ### License
