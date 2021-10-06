@@ -16,7 +16,7 @@
 ## Try to use one selector per line
 
 ```css
-# Bad
+==> Bad
 .avatar{
     border-radius:50%;
     border:2px solid white;
@@ -27,7 +27,8 @@
 #lol-no {
   // ...
 }
-# Good
+
+==> Good
 .avatar {
   border-radius: 50%;
   border: 2px solid white;
@@ -38,18 +39,74 @@
   // ...
 }
 ```
+## For Border I think border none is good
 
-This example will render "Hello Taylor" into a container on the page.
+```css
+==> Bad
+.foo {
+  border: none;
+}
 
-You'll notice that we used an HTML-like syntax; [we call it JSX](https://reactjs.org/docs/introducing-jsx.html). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. If you're using React as a `<script>` tag, read [this section](https://reactjs.org/docs/add-react-to-a-website.html#optional-try-react-with-jsx) on integrating JSX; otherwise, the [recommended JavaScript toolchains](https://reactjs.org/docs/create-a-new-react-app.html) handle it automatically.
+==> Good
+.foo {
+  border: 0;
+}
+```
+## Ordering of property declarations
+1. Property declarations
+List all standard property declarations, anything that isn't an @include or a nested selector.
 
-## Contributing
 
-The main purpose of this repository is to continue evolving React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
+```css
+.btn-green {
+  background: green;
+  font-weight: bold;
+  // ...
+}
+```
+2. Placed @include at the end makes it easier to read the entire selector.
 
-### [Code of Conduct](https://code.fb.com/codeofconduct)
+```css
+.btn-green {
+  background: green;
+  font-weight: bold;
+  @include transition(background 0.5s ease);
+  // ...
+}
+```
+3. For Nested Selectors
 
+```css
+.btn {
+  background: green;
+  font-weight: bold;
+  @include transition(background 0.5s ease);
 
+  .icon {
+    margin-right: 10px;
+  }
+}
+```
+
+## Naming Conventions
+1. Regarding variables, functions and mixins used lowercase hyphen-delimited, and camelCase(for css module only)  and above all meaningful.
+
+```css
+$vertical-rhythm-baseline: 1.5rem; 
+@mixin size($width, $height: $width) {
+  // ...
+}
+@function opposite-direction($direction) {
+    // ...
+}
+```
+2. For constants used all-caps snakerized variables
+```css
+==> Bad
+$css-positions: (top, right, bottom, left, center);
+==> Good
+$CSS_POSITIONS: (top, right, bottom, left, center);
+```
 
 ### License
 
