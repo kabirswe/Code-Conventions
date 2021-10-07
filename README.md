@@ -1,5 +1,5 @@
 # Code-Conventions
 
-## HTML
-## CSS
-## React Js
+### HTML
+### CSS
+### React Js
